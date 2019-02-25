@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>格式优雅的表单</title>
+	</head>
+
+	<body>
+		<!--form标签中嵌套表格标签-->
+		<form action="#" method="post">
+			<!--标题-->
+			<!--剧中便签-->
+			<center>
+				<div>XXX网站</div>
+			</center>
+			<table border="1px" width="500px" align="center">
+				<tr>
+					<td>用户名</td>
+					<td>
+						<input type="text" name="username" />
+					</td>
+				</tr>
+				<tr>
+					<td>密码</td>
+					<td>
+						<input type="password" name="passwprd" />
+					</td>
+				</tr>
+				<tr>
+					<td>性别</td>
+					<td>
+						<input type="radio" name="sex" />男
+						<input type="radio" name="sex" />女
+					</td>
+				</tr>
+				<tr>
+					<td>爱好</td>
+					<td>
+						<input type="checkbox" name="hobit" />足球
+						<input type="checkbox" name="hobit" />篮球
+						<input type="checkbox" name="hobit" />乒乓球
+						<input type="checkbox" name="hobit" />听音乐
+						<input type="checkbox" name="hobit" />看电影
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2" align="center">
+						<input type="submit" value="提交" />
+					</td>
+				</tr>
+			</table>
+		</form>
+
+	</body>
+
+</html>

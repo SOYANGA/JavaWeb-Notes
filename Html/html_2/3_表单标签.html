@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+
+	<body>
+		<!--
+			表单标签:from标签
+				常用属性:
+					action；提交的地址url，本地提交：#
+					method:提交方式
+								get方式
+								post方式
+								
+				表单项:
+					文本框:
+						input type="text"
+					密码以非明文形式呈现:
+						input type="password"
+					单选按钮:
+						input type="radio"
+					复选框:
+						inoput type="checkbox"
+					下拉菜单:普通的下拉菜单
+						<select>下拉菜单</select>
+						<optio>选项卡</optio>
+						上传文件
+						input type="file"
+						
+						文本域:
+						testarea
+							rows表示当前文本域中有多少行
+							cols:一行中能写多少个字符
+						表单中的默认值
+						placeholder:当前表单项中的一个默认值
+						提交按钮：
+						input type="submit"
+						普通按钮：
+						input type="button"
+						出生日期:
+						input type="data"
+						input type="datatime-local"
+						input type="datatime"
+						重置:
+						input type="reset"
+						
+		-->
+		<form action="#" method="get">
+			<!--input标签中
+				必填属性:name属性 需要给后台进行标记
+				id属性:在当前html的标签中id值是唯一的，后期讲js中dom编程 
+				getElementById("id属性")
+			-->
+			用户名:<input type="text" id="name" name="userName" placeholder="请输入用户名"/><br /> 密码:
+			<input type="password" name="password" /><br />
+			<!--男或者女看成同一组信息，指定name属性值一样  value默认值-->
+			性别:<input type="radio" name="sex" value="男" />男
+			<input type="radio" name="sex" />女
+			<br /> 
+			爱好:
+			<input type="checkbox" name="hobit" />足球
+			<input type="checkbox" name="hobit" />篮球
+			<input type="checkbox" name="hobit" />乒乓球
+			<input type="checkbox" name="hobit" />音乐
+			<input type="checkbox" name="hobit" />音乐
+			<br />
+			籍贯:
+			<select name="jiguan">
+				<option value="请选择">请选择</option>
+				<option value="西安">西安</option>
+				<option value="咸阳">咸阳</option>
+				<option value="宝鸡">宝鸡</option>
+			</select>
+			<br />
+			上传照片:
+			<input type="file" name="photo"/><br />
+			自我介绍:
+			<!--rows表示当前文本域中有多少行
+				cols:一行中能写多少个字符
+			-->
+			<textarea rows="5" cols="20">
+				XXXX
+			</textarea>
+			<br />
+			1.出生日期 <input type="date" /><br />
+			<!--
+				1.显示年月日 
+				<input type="date" />
+				2.在显示年月日的基础上可以显示当前的具体时间
+				<input type="datetime-local" />
+				3.自行进行填写时间（文本框）
+				<input type="datetime" />
+			-->
+			
+			2.出生日期<input type="datetime-local" /><br />
+			3.出生日期<input type="datetime" />
+			<br />
+			<input type="submit" value="注册"/><br />
+			<input type="button" value="普通按钮"/><br />
+			<input type="reset" value="重置"/>
+		</form>
+	</body>
+
+</html>

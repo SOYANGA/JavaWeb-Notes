@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>模拟qq登陆页面</title>
+		<style>
+		/*修饰主div*/
+		#main{
+			/*设置高度和宽度，边框*/
+			width: 450px;
+			height: 300px;
+			border: 1px solid black;
+			/*设置主div背景*/
+			background-image: url(img/1.jpg);
+			/*解决重复问题*/
+			background-repeat: no-repeat;
+			/*设置背景图片的起始位置*/
+			background-position: center top;
+			/*设置外边界*/
+			margin: 300px 0px 0px 500px;
+			
+		}
+		/*设置密码div样式-外边框*/
+		#username{
+			margin: 60px 0 0 100px;
+		}
+		/*设置密码div样式-外边框*/
+		#pwd{
+			margin: 20px 0 0 100px;
+		}
+		/*设置密码div样式-外边框*/
+		#path{
+			margin: 20px 0 0 150px;
+		}
+		
+		/*设置立即注册按钮的位置*/
+		#regbtn{
+			margin-left: 30px;
+		}
+		/*设置用户名的内容输入位置，避免覆盖背景图片*/
+		#userInput{
+			background-image: url(img/1.jpg);
+			background-repeat: no-repeat;
+			padding-left:30px ;
+		}
+		/*设置密码的内容输入位置，避免覆盖背景图片*/
+		#pwdInput{
+			background-image: url(img/1.jpg);
+			background-repeat: no-repeat;
+			padding-left:30px ;
+		}
+		</style>
+	</head>
+	<body>
+		<div id="main">
+			<form action="#" method="post">
+				<div id="username">
+				用户名:<input type="text" name="user" id="userInput"/>
+				</div>
+				<div id="pwd">
+				密&nbsp;&nbsp;&nbsp;码:<input type="password" name="password" id="pwdInput"/>
+				</div>
+				<div id="path">
+				<input type="submit" value="登陆" />
+				<input type="button" value="立即注册" id="regbtn" />
+				</div>
+			</form>
+		</div>
+	</body>
+</html>

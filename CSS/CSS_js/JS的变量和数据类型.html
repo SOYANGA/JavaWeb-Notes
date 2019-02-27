@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>JS的变量和数据类型</title>
+		<script>
+			/**
+			 * js中定义变量
+			 * 1）使用var定义变量使用var定义，var可以省略不写，但是为了结构完整性，建议带上var
+			 * 2)在js中，是可以重复定义变量的的
+			 * 		var a = 10;
+			 * 		var a = 20;(后面定义的变量会把前一个a的值覆盖掉)
+			 * 3)在js中var可以定义任何类型
+			 * 
+			 * 函数:typeof(变量);查看变量是什么类型，返回数据类型
+			 * js中的数据类型：(通过变量名来定义)
+			 * 	1)无论是整数还是小数，我们称为Number类型
+			 * 	2)无论是字符还是字符串，我们称为String类型
+			 * 	3)boolean类型
+			 * 	4)Object
+			 */
+//			var a = 10;
+			var a;
+			var b = 3.14;
+			var c = "hello";
+			var d = 'd';
+			var e = true;
+			var f = new Object(); //模板对象
+			document.write("a的值是" + a + "   a的类型是" + typeof(a) + " <br />");
+			document.write("b的值是" + b + "   b的类型是" + typeof(b) + " <br />");
+			document.write("c的值是" + c + "   a的类型是" + typeof(c) + " <br />");
+			document.write("d的值是" + d + "   a的类型是" + typeof(d) + " <br />");
+			document.write("e的值是" + e + "   a的类型是" + typeof(e) + " <br />");
+			document.write("f的值是" + f + "   a的类型是" + typeof(f) + " <br />");
+		</script>
+	</head>
+
+	<body>
+	</body>
+
+</html>

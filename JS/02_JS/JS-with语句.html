@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>With-语句</title>
+
+		<style>
+			div {
+				width: 100%;
+				border: 1px solid red;
+				height: 400px;
+			}
+			
+			table {
+				border: 1px solid gold;
+			}
+			
+			td {
+				border: 1px solid green;
+			}
+		</style>
+
+		<script>
+			/*
+			 * with语句格式
+			 * with(对象名：文档对象){
+			 * 	write("</hr>");
+			 * }
+			 */
+			with(document) {
+				for (var i = 1; i <= 5; i++) {
+					for (var j = 1; j <= i; j++) {
+						write("*&nbsp");
+					}
+					write("<br />")
+				}
+			}
+			with(document) {
+				write("<div>");		
+				write("<table>");
+				for (var i = 1; i <= 9; i++) {
+					write("<tr>");
+					for (var j = 1; j <= i; j++) {
+						write("<td>");
+						write(i + "*" + j + "=" + (i * j) + "&nbsp");
+						write("</td>");
+					}
+					write("</tr>");
+				}
+				write("</table>");
+				write("</div>");
+			}
+		</script>
+	</head>
+
+	<body>
+	</body>
+
+</html>

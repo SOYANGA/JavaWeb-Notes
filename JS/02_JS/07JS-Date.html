@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Date对象</title>
+		<script>
+			//2019年3月1日 在java中：simpleleDateFormat
+			var date = new Date();
+			document.write(date+"<br />");
+			//一些方法
+			//获取 getYear 为年份之差  getFullYear 获取当前年份
+			document.write(date.getFullYear()+"年"+"&nbsp");
+			//获取月份
+			document.write((date.getMonth()+1)+"月");
+			//获取日期
+			document.write((date.getDate())+"日"+"&nbsp");
+			//获取星期
+			document.write("星期"+date.getDay()+"&nbsp");
+			//获取具体时间
+			document.write(date.getHours()+":");
+			document.write(date.getMinutes()+":");
+			document.write(date.getSeconds());
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

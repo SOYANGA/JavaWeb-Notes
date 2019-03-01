@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>js中的函数</title>
+		<script>
+			/*
+			 * 如何定义一个函数
+			 * 	固定格式：定义函数  funcation 函数名称(形式参数列表){
+			 * 			函数中的逻辑代码;要符合Js中的语法
+			 * }
+			 * 
+			 * 调用函数：
+			 * 		单独调用
+			 * 		函数名称(实际参数列表);
+			 * 		赋值调用
+			 * 		var i = 函数名称(实际参数列表);
+			 * 在定义函数的注意事项：
+			 * 1)在js中函数的形式参数不能用var定义
+			 * 2)在js中是可以有return语句的;一般情况return也可以不写；
+			 * 要么返回值统一定义函数时统一带上return语句;
+			 * 3)在java中没有方法重载的概念，后面定义的方法会覆盖前面定义的方法。
+			 * 
+			 * 4)在Js函数中中存在一个默认数组叫arguments数组  
+			 * 		arguments数组作用是将实际参数参数的数值，作用将实际参数赋值给形式参数。
+			 * 		如果形式参数的个数大于实际参数  结果就是NAN
+			 * 		如果形式参数的个数小于实际参数 结果就是 将需要的形式进行计算，多余的实际参数丢弃掉。
+			 * 
+			 * 5)js中定义函数，不用写返回值
+			 */
+			//定义求两个数据之合的函数
+			function add(a, b) {
+				alert(arguments.length);
+				for (var i in arguments) {
+					document.write(arguments[i] + "&nbsp" + "<br />");
+				}
+				var result = a + b;
+				//document.write("结果为:"+result);
+				return result;
+			}
+
+			function add(a, b, c) { //重载过程中将上一个同名方法覆盖  js中内部存在数组:arguments数组名称
+				var result = a + b + c;
+				document.write("三个参数的结果为" + result);
+			}
+			//调用函数
+			add(10, 20, 30, 40);
+			//			var s = add(10, 20，30，40); //赋值调用   可以对s进行扩展
+			//			document.write("结果为:" + s);
+		</script>
+	</head>
+
+	<body>
+
+	</body>
+
+</html>

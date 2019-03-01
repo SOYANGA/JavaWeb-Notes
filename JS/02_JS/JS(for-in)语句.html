@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>for-in语句</title>
+		<script>
+			/**
+			 * for-in语句--for each循环
+			 * 格式:
+			 * for(var 变量名   in (数组名称 对象名称 自定义对象)){
+			 * 		输出变量...
+			 * }
+			 */
+			//JS中定义数组对象
+			//			var arr1 = [10, 20, 30, 40];
+			//			var arr2 = new Array(true, 10, 3.14);
+			//			for (var i = 0; i < arr1.length; i++) {
+			//				document.write(arr1[i] + "&nbsp");
+			//			}
+			//			for (var i in arr1) {
+			//				document.write(arr1[i] + "&nbsp" + "&nbsp")
+			//			}
+			//			定义对象
+			function Person(name, age) { //this :代表当前Person对象
+				this.name = name;
+				this.age = age;
+			}
+			//创建一个对象：用var定义变量/对象
+			var p = new Person("eric", 20);
+			/*
+			 * for(var 变量名 in 自定对象){
+			 * 	document.write(输出当前对象属性：自定义对象名称);
+			 * }
+			 */
+			for (var i in p) {
+				document.write(p[i] + "<br />")
+			}
+		</script>
+	</head>
+
+	<body>
+	</body>
+
+</html>

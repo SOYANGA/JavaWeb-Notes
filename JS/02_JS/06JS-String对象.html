@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>JS中的String对象</title>
+		<script>
+			/*
+			 * 如何定义一个String对象
+			 */
+			//方式1
+			var str1 = new String("Hello"); //会创建两个对象
+			var str2 = new String("Hello");
+//			document.write((str1 == str2) + "<br />");
+				//String的valueOf():比较的是字符串的原始值是否相同(内容)
+//			document.write((str1.valueOf() == str2.valueOf()) + "<br />");
+			//方式2
+			var str1 = "world";
+			var str2 = "world";
+//			document.write(str1 == str2); //直接是在常量池中对比
+			/**
+			 * charAt():返回指定索引处的字符
+			 * indexOf()返回当前字符第一次出现的索引
+			 * lastindexOf()返回当前字符最后一次出现的索引
+			 * replace("s","*") 替换
+			 * fontcolor("#F00") 指定当前字符颜色标记
+			 * split():字符串分割
+			 * substring(start,end)  [) 左闭右开
+			 * substr(start,length)
+			 * 				返回一个从指定长度的子字符串。
+			 */
+			var s = "hellojava";
+			with(document) {
+				write(s.charAt(4)+"<br/>");
+				write(s.indexOf("a")+"<br />");
+			}
+		</script>
+	</head>
+
+	<body>
+	</body>
+
+</html>

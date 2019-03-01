@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>JS流程控制语句</title>
+		<script>
+			/*
+			 * 1)if：三个格式和java通用的
+			 * if(表达式){
+			 * 	语句;
+			 * }else{
+			 * 	
+			 * }
+			 * 
+			 * if语句中表达式
+			 * 		1)如果表达式是非null类型的，条件成立；否则，条件不成立\
+			 * 		2)如果表示是String类型(空字符串，条件不成立；不是空字符串，条件成立)
+			 * 		3)如果是一个number类型，如果是一个0条件不成立，如果是非0，否则成立
+			 * 		4)如果是一个boolean,true成立，false不成立
+			 */
+			//			if (0.001) {
+			//				alert("条件成立");
+			//			} else {
+			//				alert("条件不成立");
+			//			}
+			/**
+			 * 2)选择结构语句之:Switch语句
+			 * switch(表达式){ //JS中switch语句中可以是
+			 * 	case 值1： case中的值可以是常量也可以变量
+			 * 	语句1;
+			 *  braek;
+			 * 	case 值2;
+			 * 	语句2;
+			 * 	break;
+			 * 	default:
+			 * 	语句
+			 * 	braek;
+			 * }
+			 * java中JDK1.5中添加了枚举类型  JDK1.7后可以使用String类型
+			 * 
+			 * 
+			 * switch中断的标志是break;如果你使用break就是一直执行到程序末尾
+			 * 
+			 */
+			//			var i = "b";
+			//			var b = "b";
+			//			switch (i) {
+			//				case "a":
+			//					document.write("你选择了a");
+			//					break;
+			////				case "b"
+			//				case b:
+			//					document.write("你选择了b");
+			//					break;
+			//				default:
+			//					document.write("你选择了d")
+			//					break;
+			//			}
+			/*
+			 *循环语句
+			 * for(初始化变量;条件判断语句；++/--){
+			 * 	循环体语句
+			 * }
+			 * 
+			 * while(条件判断语句){
+			 * 	循环体语句；
+			 * 	步长语句；
+			 * }
+			 * 
+			 * do{  循环体至少执行依次
+			 *  循环体语句；
+			 *  步长语句；
+			 *
+			 * }while(条件判断语句)
+			 */
+			for (var i = 0; i <= 3; i++) {
+				document.write("hellword" + "<br/>");
+			}
+			document.write("<hr />")
+			var j = 0;
+			while (j <= 3) {
+				document.write("hellword" + "<br/>");
+				j++;
+			}
+			document.write("<hr />")
+			var i = 0;
+			do {
+				document.write("hellword" + "<br/>");
+				i++
+			} while (i <= 3)
+		</script>
+	</head>
+
+	<body>
+	</body>
+
+</html>

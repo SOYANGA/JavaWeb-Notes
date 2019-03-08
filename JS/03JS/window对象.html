@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>window对象</title>
+		<script>
+			//窗口对象
+			/*
+			 * window对象中的一些方法
+			 * open()方法：打开新窗口并装入给定的url的文档
+			 * 	参数1：打开地址文件的路径 URL
+			 * 	参数2：打开当前资源文件的方式；常用两个值_blank _self
+			 * 		_blank 新建窗口打开      _self 在当前窗口打开
+			 * 	参数3：打开当前资源文件的宽度和高度，是否显示工具栏。
+			 * 
+			 * 跟踪定时器相关的
+			 * 		setInterval("任务()",毫秒值);  重复执行
+			 * 		setTimeOut("任务()",毫秒值) ;	一次执行
+			 * 取消定时器操作
+			 * 		clearInterval("intervalID") 停止
+			 * 		clearTimeOut("interValID") 停止
+			 */
+			function testOpen() {
+				//利用window方法
+				window.open("网页时钟.html", "_blank", "width:400px;height:500px;toobar:0");
+			}
+
+			function test() {
+				//在js中:console对象
+				//log("打印 ")  日志文件
+				//				console.log("setInterval被调用了");
+				alert("test123");
+			}
+			//定义任务ID
+			var taskID;
+
+			function testInterval() {
+				//taskID = window.setInterval("test()", 2000);
+				taskID = window.setTimeout("test()", 1000);
+			}
+
+			function testClear() {
+				//clearInterval(taskID);
+				clearTimeout(taskID);
+			}
+		</script>
+	</head>
+
+	<body>
+		<!--onclick：单机点击事件
+			ondbclick :双击点击事件
+		-->
+		<input type="button" value="Open" onclick="testOpen()" />
+		<br />
+		<input type="button" value="开启定时器" onclick="testInterval()" />
+		<br />
+		<input type="button" value="取消定时器" onclick="testClear()" />
+	</body>
+
+</html>

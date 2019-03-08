@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>js原型</title>
+		<script>
+			/*
+			 * 在不使用自定义对象，同样要是用arry对象追加max,search方法。如何去做？
+			 * 
+			 * 
+			 * 解决方法：
+			 * 	方案1:
+			 * 		function Array(){
+			 * 		//内置对象中存在方法
+			 * 		this.join = function(){...}
+			 * 		this.reverse = function(){...}
+			 * 
+			 * 		//外部方法
+			 * 		this.search = function(){...}
+			 * 
+			 * 这种方法行不通，js的源码不能直接给里面添加自己的方法。
+			 *
+			 * }
+			 * 
+			 * 方案2：原型属性 ：prototype
+			 * 
+			 * 1)在JS中，每个内置对象中都存在原型属性：prototype
+			 * 2)当给原型(prototype)对象中添加一个方法，那么该方法会自动添加到内置对对象中
+			 * 3)原型属性的出现就是为了JS的内置对象添加属性存在的
+			 * 
+			 * function Array(){ //内置对象
+			 * 	//创建一个原型对象
+			 * 	var p = new Prototype();
+			 * 	this.search = function(){...} //自动添加
+			 * }
+			 * 	//定于原型对象
+			 * 	function Prototype(){
+			 * 		this.search = function(){...}
+			 * }
+			 */
+			//添加search(array,target)   
+			//内置对象.prototype.追加的方法名称=function(参数){}
+			Array.prototype.search = function(target) {
+					//遍历数组
+					for (var i = 0; i < this.length; i++) {
+						if (this[i] == target) {
+							return i;
+						}
+					}
+					//找不到,返回-1
+					return -1;
+				}
+				//追加max方法
+			Array.prototype.max = function() {
+				//定义参照物
+				var max = this[0];
+				for (var i = 1; i < this.length; i++) {
+					if (this[i] > max) {
+						max = this[i];
+					}
+				}
+				return max;
+			}
+			var arr = [10, 21, 65, 3, 78, 15];
+			//查找15这个元素在数组中的位置
+			var index = arr.search(15);
+			document.write("位置是:" + index + "<br/>");
+			var max = arr.max();
+			document.write("最大值是:" + max);
+		</script>
+	</head>
+
+	<body>
+	</body>
+
+</html>

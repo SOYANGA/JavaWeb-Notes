@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>location对象</title>
+		<script>
+			/**
+			 * location对象中一个方法:reload():刷新当前页面
+			 * 属性:herf属性:改变当前location的url,跳转到指定的url
+			 */
+			//			window.location.href = "";
+			function testHref() {
+				window,
+				location.href = "网页时钟.html";
+			}
+
+			function testReload() {
+				//window对象调用reload();
+				window.location.reload();
+			}
+			window.setInterval("testReload()",1000);
+		</script>
+	</head>
+
+	<body>
+		<a href="JS原型.html">超链接</a><br />
+		<input type="button" value="跳转" onclick="testHref()" />
+	</body>
+
+</html>

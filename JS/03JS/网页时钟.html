@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>网页时钟</title>
+		<style>
+			body {
+				background-color: black;
+			}
+			
+			center {
+				color: white;
+				font: normal bold 100px "微软雅黑";
+				/*border: 1px solid white;*/
+				position: fixed;
+				top: 300px;
+				left: 384px;
+			}
+		</style>
+		<script>
+			//一个函数
+			//创建一个日期对象
+			//拼接出来字符串（利用日期对象）
+			//通过ID标签值获取span对象: document,getElementById("dataTip");
+			//可以给span标签对象设置文本内容：属性innerHTML
+			var dateTip = 0;
+			window.onload = function() {
+				dateTip = document.getElementById("dateTip");
+			}
+
+			function weekTime(date) {
+				var date_cn = "";
+				switch (date.getDay()) {
+					case 0:
+						date_cn = "日";
+						break;
+					case 1:
+						date_cn = "一";
+						break;
+					case 2:
+						date_cn = "二";
+						break;
+					case 3:
+						date_cn = "三";
+						break;
+					case 4:
+						date_cn = "四";
+						break;
+					case 5:
+						date_cn = "五";
+						break;
+					case 6:
+						date_cn = "六";
+						break;
+				}
+				return date_cn;
+			}
+
+			function dateTime() {
+				var date = new Date();
+				var week = "(星期" + weekTime(date) + ")";
+				var year = date.getFullYear() + "年";
+				var months = date.getMonth() + 1;
+				months = months < 10 ? '0' + months + "月" : months + "月";
+				var day = date.getDate();
+				day = day < 10 ? '0' + day + "日" : day + "日";
+				var hours = date.getHours();
+				hours = hours < 10 ? '0' + hours + ":" : hours + ":";
+				var minutes = date.getMinutes();
+				minutes = minutes < 10 ? '0' + minutes + ":" : minutes + ":";
+				var seconds = date.getSeconds();
+				seconds = seconds < 10 ? '0' + seconds : seconds;
+				var str = year + months + day + "</br>" + hours + minutes + seconds + week;
+				dateTip.innerHTML = str;
+			}
+			window.setInterval("dateTime()", 100);
+			//调用上面的方法
+			//用一个定时器去做,  每隔对少毫秒执行任务
+			//		window.setInterval("task,指定毫秒值);表示每隔多少毫秒重复去执行这个任务
+			//		window.setTimeout("task",毫秒值);经过多少毫秒后执行一次任务
+//			window对象在Js中属于
+		</script>
+	</head>
+
+	<body>
+		<center>
+			<div id='dateTip'></div>
+		</center>
+	</body>
+
+</html>

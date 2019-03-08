@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			//定义一个数组
+			var arr = [10, 24, 65, 3, 78, 15];
+			var arrayUtil = new ArrayUtil();
+
+			function ArrayUtil() {}
+			arrayUtil.search = function(array, target) {
+				for (var i in array) {
+					if (array[i] == target) {
+						return i;
+					}
+				}
+				//如果查找不到返回-1；
+				return -1;
+			}
+			arrayUtil.max = function(array) {
+				var maxindex = 0;
+				for (var i in array) {
+					if (array[maxindex] < array[i]) {
+						maxindex = i;
+					}
+				}
+				return array[maxindex];
+			}
+			document.write("数组中相应元素的下标为：" + arrayUtil.search(arr, 24));
+			document.write("<hr />")
+			document.write("数组中最大元素为：" + arrayUtil.max(arr));
+		</script>
+	</head>
+
+	<body>
+	</body>
+
+</html>

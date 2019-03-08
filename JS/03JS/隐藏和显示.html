@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>隐藏和显示</title>
+		<script>
+			/**
+			 * 1.确定事件：
+			 * 			onload 在body中的内容加载完成后  会触发这个方法
+			 * 			onclick：单机事件
+			 * 			ondbclick：双击事件
+			 * 			onfocus：聚焦事件
+			 * 			onbulr：失去焦点事件
+			 * 			onchange:选项卡发生变化的事件
+			 * 		
+			 * 2.function init(){
+			 * 		要做什么事情
+			 * 		1）要获取要操作的元素(标签)
+			 * 		2)通过元素对象中: style样式 
+			 * 						设置display属性(显示隐藏属性)
+			 * }
+			 */
+			var img;
+
+			function init() {
+				//通过id属性值获取img对象
+				img = document.getElementById("img1");
+			}
+			//2)编写事件监听器
+			function showImg() {
+				//设置标签对象的style属性的一个display参数
+				img.style.display = "block"; //固定的显示：block
+			}
+
+			function hideImg() {
+				//设置标签对象的style属性的一个display参数
+				img.style.display = "none"; //默认隐藏：none
+			}
+		</script>
+	</head>
+
+	<body onload="init()">
+		<!--1)确定事件源
+			2)编写事件监听器
+		-->
+		<input type="button" value="显示" onclick="showImg()" />  <!--3)注册事件监听器-->
+		<input type="button" value="隐藏" onclick="hideImg()" />
+		<img src="img/059b5245-e3c8-43bf-80fe-700f0e4e68b8-thumbnail.jpg" id="img1" />
+	</body>
+
+</html>

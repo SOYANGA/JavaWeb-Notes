@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>常见的事件分类</title>
+		<script>
+			/**
+			 * 1)点击事件
+			 * 		onclick：单击点击事件
+			 * 		ondblclick：双击点击事件
+			 * 2)和焦点相关的事件
+			 * 		onfocus:聚焦事件
+			 * 		onblur:失去焦点
+			 * 3)选项卡发生变化时间
+			 * 		onchange事件：经常用于下拉菜单中:省市联动文本
+			 * 4)和鼠标相关的事件
+			 * 		onmouserover:鼠标经过事件
+			 * 		onmouserout：鼠标移除事件
+			 * 5)和键盘相关的事件
+			 * 		onkeyup:键盘按键抬起事件
+			 */
+			function testClick() {
+				alert("点我干啥:)");
+			}
+
+			function testDblClick() {
+				alert("双击666:)");
+			}
+
+			function testFocus() {
+				//聚焦事件
+				useName.value = ""
+			}
+
+			function testBlur() {
+				//失去焦点事件
+				//获取输入框内容
+				var userNmaeValue = useName.value;
+				if (userNmaeValue != "eric") {
+					//设置nameSpan对象的innerHTML属性
+					nameSpan.innerHTML = "用户名可用".fontcolor("green");
+				} else {
+					nameSpan.innerHTML = "对不起，用户名已存在！".fontcolor("red");
+				}
+				if (userNmaeValue != "eric" && userNmaeValue.length < 4 || userNmaeValue.length > 14) {
+					nameSpan.innerHTML = "请输入4-14位字母或数字".fontcolor("red");;
+				} else if (userNmaeValue != "eric" && userNmaeValue.length >= 4 && userNmaeValue.length <= 14) {
+					nameSpan.innerHTML = "用户名合法".fontcolor("green");
+				}
+			}
+			var useName;
+			var nameSpan;
+
+			function init() {
+				//1.获取input标签对象 
+				useName = document.getElementById("userName");
+				nameSpan = document.getElementById("name_span");
+			}
+		</script>
+	</head>
+
+	<body onload="init()">
+		<input type="button" value="点我试试" onclick="testClick()" /><br />
+		<input type="button" value="双击点我试试" ondblclick="testDblClick()" /><br />
+		<br /> 用户名：<input type="text" onfocus="testFocus()" onblur="testBlur()" id="userName" value="请输入4-14位字母或者数字" size="25" />
+		<span id="name_span"></span>
+	</body>
+
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>自定义对象</title>
+		<script>
+			/*
+			 * js中的自定义对象有4种
+			 * 
+			 * 
+			 * 方式1；类似于java中的有参构造方式
+			 * 定义对象
+			 * 		function 函数名称(参数){
+			 * 			//追加属性
+			 * 			//追加方法
+			 * }
+			 * 
+			 * 创建对象
+			 * var 对象名称  =  new 函数名称(实际参数);
+			 */
+			//定义1:定义一个人的时候
+			//			function Person(name, age) { //this代表当前对象
+			//				//给Person对象中追加属性
+			//				this.name = name;
+			//				this.age = age;
+			//				//追加方法
+			//				this.say = function() {
+			//					//弹框
+			//					alert("这是一个人说话的方式")
+			//				}
+			//			}
+			//			//创建对象
+			//			var p = new Person("SOYANGA", 10);
+			//			//输出属性
+			//			document.write(p.name + "<hr />");
+			//			document.write(p.age);
+			//			//调用方法
+			//			p.say();
+			//方法2:无参形式 类似Java无参构造
+			//定义对象
+			//			function Person() {}
+			//			//创建对象
+			//			var p = new Person();
+			//			//追加属性
+			//			p.name = "张三";
+			//			p.age = 20;
+			//			//追加方法
+			//			p.say = function() {
+			//				alert("这是一是个人说话的方式")
+			//			}
+			//			//方式3:利用Object对象，Object对象是Js中所有对象的模板对象
+			//			var p = new Object();
+			//			//追加属性
+			//			p.name = "李四";
+			//			p.age = 22;
+			//			//追加方法
+			//			p.say = function(){
+			//				alert("这是张三的说话的功能");
+			//			}
+			//方式4 :以字面量的方式进行定义，json语言：json串
+			//java 中json解析：第三方 Gson ,FastJson 原生态的方法  ---支持的Jar包
+			var p = {
+				//"属性名称"："属性值"
+				"name": "赵六",
+				"age": 18,
+				"say": function() {
+					alert("这是赵六个人说话的方式");
+				}
+			};
+			//输出属性
+			document.write(p.name + "<br />");
+			document.write(p.age);
+			//调用方法
+			p.say();
+		</script>
+	</head>
+
+	<body>
+	</body>
+
+</html>

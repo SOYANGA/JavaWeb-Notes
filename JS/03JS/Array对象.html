@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>Array对象</title>
+		<script>
+			/*
+			 * 在Js中如何定义数组对象
+			 * 注意：
+			 * 			1)在JS中定义数组，长度随着具体元素的改变而改变，不用担心数组越界
+			 * 			2）Js中定的数组可以存储任意类型的元素
+			 * 
+			 * 1.方式1：
+			 * 指定数组长度
+			 * var arr = new Array(3);
+			 * 2.不指定
+			 * var arr = new Array();
+			 */
+			//方式1 开辟后去具体赋值
+			//			var arr = new Array();
+			//			alert(arr.length);
+			//			arr[0] = true;
+			//			arr[1] ="hello";
+			//			arr[2] = "c";
+			//			arr[3] = new Object();
+			//		
+			//			for(var i = 0;i<arr.length;i++){
+			//				document.write(arr[i]+"&nbsp;");
+			//			}
+			//方式二直接去new对象
+			//			var arr = new Array(true,"hello",'A',10);
+			//			
+			//直接指定具体内容(一般用这种)
+			//			var arr2  = [true,"hello",'A',10];
+			//Array对象中常用的方法
+			//join():将数组拼接成字符串
+			//reverse():将数组进行反转
+			
+			var arr = ["java", "php", "python", "hadoop"];
+			//			arr = arr.join("-"); 返回值是一个字符串
+			//			document.write(arr);
+			//			遍历arr
+			for (var i in arr) {
+				document.write(arr[i] + "&nbsp");
+			}
+			document.write("<hr />")
+				//			反转arr
+			arr.reverse();
+			//遍历
+			for (var i in arr) {
+				document.write(arr[i] + "&nbsp");
+			}
+		</script>
+	</head>
+
+	<body>
+	</body>
+
+</html>

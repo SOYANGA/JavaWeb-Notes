@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>document集合属性方式获取标签</title>
+		<!--
+			（1）通过document集合属性方式获取标签对象
+			all:返回当前页面中的所有标签对象
+			forms：返回当前页面中所有form标签对象
+			images：返回当前页面中所有img标签对象
+			links:返回当前页面所有的a href 或者 area标签对象
+		-->
+
+	</head>
+
+	<body>
+		<form>
+			<img src="" />
+			<a></a>
+		</form>
+		<a href="#">超链接</a><img src="" />
+		<form></form>
+	</body>
+	<script>
+		//all:返回当前页面中的所有标签对象
+//      var nodeList = document.all;
+		//forms：返回当前页面中所有form标签对象
+//		var nodeList = document.forms;
+		//images：返回当前页面中所有img标签对象
+//		var nodeList = document.images;
+		//links:返回当前页面所有的a href 或者 area标签对象
+//		var nodeList = document.links;
+
+		//		alert(nodeList.length);
+		//集合遍历
+		//nodeName:节点名称
+		for (var i = 0; i < nodeList.length; i++) {
+			alert(nodeList[i].nodeName);
+		}
+	</script>
+
+</html>

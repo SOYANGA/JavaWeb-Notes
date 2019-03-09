@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>DOM通过document的方法来获取标签对象</title>
+		<script>
+			/**
+			 *document的三个方法
+			 * 1)document.getElementById("id属性值");
+			 * 注意：id属性值在html标签中必须唯一，否则会会获取不到标签对象
+			 * 2)document.getElemnetByName("name属性值")
+			 * 注意：name属性可以重复
+			 * 3）document.getElemnetByTagName("tag属性")
+			 * 注意：
+			 * */
+			function getUserName() {
+				//1）获取当前标签对象通过id
+//				var input_name = document.getElementById("ueserName");
+//				//value属性
+//				alert(input_name.value);
+//				2）获取input对象的name属性，通过name属性
+//				var input_name = document.getElementsByName("name")[0];
+//				//value属性
+//				alert(input_name.value);
+//				//3)通过标志获取对象的集合
+				var input_name = document.getElementsByTagName("name")[0];
+				alert(input_name.value)
+			}
+
+			function loadHtml() {
+				
+			}
+		</script>
+	</head>
+
+	<body onload="loadHtml()">
+		用户名:<input type="text" id="ueserName" name="name" onblur="getUserName()" />
+	</body>
+
+</html>

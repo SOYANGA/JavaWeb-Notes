@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>Jquary</title>
+		<!--jq是一个强大的js代码库-->
+		<script src="js/jquery-1.8.3.js"></script>
+		<script>
+			/*
+			 * js页面载入事件：onload()事件
+			 */
+			function load() {
+				alert("1111");
+			}
+			//jq的语法的页面载入事件:ready(fn)
+			//1.导入一个js代码库
+			//2.页面载入初始化:ready(fn)
+			//方式1
+			jQuery(document).ready(function() {
+				alert("hahah");
+			});
+			//方式2:document对象:js对象
+			$(document).ready(function() {
+				alert("$(document).ready(function()");
+			});
+			//最简单方式
+			$(function() {
+				alert("$(function())");
+			});
+		</script>
+	</head>
+
+	<body onload="load()">
+		<input type="button" onclick="" />
+	</body>
+
+</html>

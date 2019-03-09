@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>通过节点关系来获取标签对象</title>
+		<!--
+			节点关系：
+				父节点:parentNode
+				子节点:childNodes
+				第一个字节点 :firstChild
+				最后一个子节点:lastChild
+				上一个兄弟节点:previousSlibing
+				下一个兄弟节点:nextSibling
+				
+			在childNodes/firstChild/lastChild属性中有一个节点类型
+			noteType
+				空格换行  3
+				标签对象的节点类型  1
+				注释的类型 8
+		-->
+	</head>
+
+	<body>
+		<form><a href="#">超链接</a><input type="text" /><input type="button" /><!--注释--></form>
+		<form><a href="#">跳转</a><input type="button" /></form>
+	</body>
+	<script>
+		//获取第一个a标签对象
+		var aNode = document.links[0];
+		alert(aNode.nodeName);
+		//获取当前第一个a标签的父节点对象:form
+		var formNode = aNode.parentNode;
+		alert(formNode.nodeName);
+		//获取第一个form标签的字节点对象
+		var nodeChildList = formNode.childNodes;
+		//		alert(nodeChildList.length);
+		//标签对象的.nodeType：获取当前节点的节点类型
+		//输出所有的标签对象名称
+//				for (var i in nodeChildList) {
+//					document.write(nodeChildList[i].nodeName+",节点类型是"+nodeChildList[i].nodeType+"<br />");
+//				}
+		for (var i = 0; i < nodeChildList.length; i++) {
+			//筛选出标签类型是对象类型的节点
+			if (nodeChildList[i].nodeType == 1) {
+				document.write(nodeChildList[i].nodeName + ",节点类型是" + nodeChildList[i].nodeType + "<br />");
+			}
+		}
+		//获取formNode对象的第一个子节点对象：
+		//		var node = formNode.firstChild;
+		//		alert(node.nodeName);
+		//获取formNode对象的最后一个子节点对象：
+		//		var node = formNode.lastChild;
+		//		alert(node.nodeName);
+		//获取第二个a节点对象
+//		var aNode = document.links[1];
+		//获取a节点的下一个兄弟节点
+//		var next = aNode.nextSibling;
+//		alert(next.nodeName)
+			//获取上一个兄弟节点
+//		var pre = next.previousSibling;
+//		alert(pre.nodeName)
+	</script>
+
+</html>

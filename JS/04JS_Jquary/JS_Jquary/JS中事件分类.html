@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>JS中事件分类</title>
+
+		<style>
+			#div1 {
+				border: 1px solid greenyellow;
+				height: 150px;
+				width: 150px;
+			}
+		</style>
+		<script>
+			//选项卡发生改变的事件：onchange事件
+			//鼠标经过事件 onmousemove事件
+			//鼠标移出事件  onmouse
+			function change() {
+				//获取当前这个标签对象
+				//再通过当前标签对象获取选中的内容
+				var jiguan = document.getElementById("jiguan").value;
+				//				alert(jiguan);
+				//获取城市的所在的select标签对象
+				var city = document.getElementById("city");
+				//清空当前innerHTML的内容
+				city.innerHTML = "";
+				//通过城市所在的标签对象的innerHTML属性拼接：<option></option>
+				if (jiguan == "陕西省") {
+					//定义一个数组
+					var arr = ["西安市", "咸阳市", "宝鸡市"];
+					//遍历数组
+					for (var i = 0; i < arr.length; i++) {
+						//互获取每一个城市的内容，拼接到城市的select中
+						city.innerHTML += "<option value='" + arr[i] + "'>" + arr[i] + "</option>"
+					}
+				}
+				if (jiguan == "山西省") {
+					//定义一个数组
+					var arr = ["大同市", "太原市", "运城市"];
+					//遍历数组
+					for (var i = 0; i < arr.length; i++) {
+						//互获取每一个城市的内容，拼接到城市的select中
+						city.innerHTML += "<option value='" + arr[i] + "'>" + arr[i] + "</option>"
+					}
+				}
+				if (jiguan == "广东省") {
+					//定义一个数组
+					var arr = ["广州市", "深圳市", "东莞市"];
+					//遍历数组
+					for (var i = 0; i < arr.length; i++) {
+						//互获取每一个城市的内容，拼接到城市的select中
+						city.innerHTML += "<option value='" + arr[i] + "'>" + arr[i] + "</option>"
+					}
+				}
+			}
+			//页面加载完成之后的事件：一般再body完成之后实现
+			function testload() {
+				alert("触发onlad事件！");
+			}
+
+			function testOnmousemove() {
+				alert("鼠标经过事件发生了！");
+			}
+
+			function testonmouseout() {
+				alert("鼠标移出事件发生了")
+			}
+
+			function testUp() {
+				//获取当前输入内容
+				var user = document.getElementById("user").value;
+				var user_sapn = document.getElementById("user_span").value;
+				if (user.length <= 6) {
+					user_span.innerHTML = "用户名符合格式".fontcolor("green");
+				} else {
+					user_span.innerHTML = "请按照正确格式输入".fontcolor("red");
+				}
+			}
+		</script>
+	</head>
+
+	<body onload="testload()">
+		籍贯:
+		<select id="jiguan" onchange="change()">
+			<option value="请选择">请选择</option>
+			<option value="陕西省">陕西省</option>
+			<option value="山西省">山西省</option>
+			<option value="广东省">广东省</option>
+		</select> 城市:
+		<select id="city">
+		<br />
+		</select>
+		<br />
+		<div id="div1" onmousemove="testOnmousemove()" onmouseout="testonmouseout()">div内容</div>
+		<br />
+		<input type="text" onkeyup="testUp()" onkeypress="" onkeydown="" id="user" /><span id="user_span"></span>
+	</body>
+
+</html>

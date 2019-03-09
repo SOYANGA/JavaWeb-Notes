@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>标签对象的其他方法</title>
+		<!--
+			和标签对象相关的方法
+				1）添加相关的方法
+				
+					添加标签对象<input/>
+					createElement("标签名称");
+					
+					添加标签对象的属性的方法
+					setAttribute("属性","属性值");
+					setAttribute("type","button");
+					<input type="button"/>
+				2)和插入相关的方法
+					给对象添加一个子元素 在末尾添加
+					父节点对象.appendChild(子节点对象);在元素的末尾添加标签对象
+					insertBefore(新标签对象,指定标签对象中添加)在指定元素的前面添加新的元素
+				3)和删除相关的方法
+					removeChild("子元素对象"):默认删除最后
+		-->
+
+	</head>
+
+	<body>
+		<input type="button" value="添加" onclick="addButton()" /><input type="button" value="删除" onclick="delButton()" /><input type="button" value="按钮" id="btn" />
+	</body>
+	<script>
+		//添加
+		function addButton() {
+			//创建一个input标签对象
+			var input = document.createElement("input"); //<input />
+			//添加属性
+			input.setAttribute("type", "button"); //<input type="button" />
+			input.setAttribute("value", "新按钮"); //<input type="button" value = "新按钮" />
+			//如何来获取body对象
+			var bodyNode = document.getElementsByTagName("body")[0];
+			//给body中追加一个子节点
+			bodyNode.appendChild(input);
+			//获取id = "btnode"的标签对象
+			//			var btn = document.getElementById("btn");
+			//			bodyNode.insertBefore(input, btn);
+		}
+
+		function delButton() {
+			//获取父节点标签对象
+			var bodyNode = document.getElementsByTagName("body")[0];
+			//获取最后一个子节点元素对象
+			var input = bodyNode.lastChild;
+			//删除父节点下面的指定对象
+			bodyNode.removeChild(input);
+		}
+	</script>
+
+</html>

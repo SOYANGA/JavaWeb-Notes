@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<contanct-list>
+    <contanct id="01">
+        <name>张三</name>
+        <id>01</id>
+    </contanct>
+
+    <contanct id="02">
+        <name>李四</name>
+        <id>02</id>
+    </contanct>
+</contanct-list>

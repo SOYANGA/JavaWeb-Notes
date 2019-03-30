@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.soyanga</groupId>
+    <artifactId>servletTest</artifactId>
+    <version>1.0.0</version>
+
+    <!--打包方式 war  tomcat是能够解压的-->
+    <packaging>war</packaging>
+
+    <dependencies>
+        <!-- https://mvnrepository.com/artifact/javax.servlet/javax.servlet-api -->
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+            <version>3.1.0</version>
+            <!--依赖范围
+                compile 编译环境
+                test    junit单元测试
+                provided servlet/jsp
+
+                将当前工程导入的servlet作为提供者。当前工程
+                打包为war包，不参会与打包(也能解决tomcat中本省servlet和jar包版本冲突)
+            -->
+            <scope>provided</scope>
+        </dependency>
+
+    </dependencies>
+
+</project>

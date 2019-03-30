@@ -1,0 +1,19 @@
+<!--
+声明dtd文件约束 语法
+<!DOCTYPE 标签的根元素 [
+        元素声明
+]>
+-->
+        <!ELEMENT note (to+,from,heading,body+)>
+        <!ELEMENT to      ANY>
+        <!ELEMENT from    (#PCDATA)>
+        <!ELEMENT heading (#PCDATA)>
+        <!ELEMENT body    (#PCDATA)>
+
+        <!--声明body的属性-->
+
+        <!--<!ATTLIST 元素名称 属性名称 属性类型 #REQUIRED>-->
+
+        <!ATTLIST body id CDATA #REQUIRED>
+
+

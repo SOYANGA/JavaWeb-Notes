@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+
+<!--xml中的dtd语法规则-->
+
+<!--<!DOCTYPE 根元素 SYSTEM "文件名">-->
+<!--内部引用dtd约束-->
+
+<!--<!DOCTYPE note [-->
+<!--<!ELEMENT note (to,from,heading,body)>-->
+<!--<!ELEMENT to      (#PCDATA)>-->
+<!--<!ELEMENT from    (#PCDATA)>-->
+<!--<!ELEMENT heading (#PCDATA)>-->
+<!--<!ELEMENT body    (#PCDATA)>-->
+<!--]>-->
+
+
+<!--外部引入dtd约束-->
+<!DOCTYPE note SYSTEM "note.dtd">
+
+<!--xml文件的标签-->
+<note>
+    <to>
+        <to>George</to>
+    </to>
+    <to>ddd</to>
+    <from>John</from>
+    <heading>Reminder</heading>
+    <body id="0">Don't forget the meeting!</body>
+    <body id="001">Don't forget the meeting!</body>
+</note>

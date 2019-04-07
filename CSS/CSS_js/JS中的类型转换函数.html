@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>JS中的类型转换函数</title>
+		<script>
+			/*
+			 * js中的类型转换函数
+			 * 
+			 * String("10")->Number(10整数)
+			 * parseInt(变量名);
+			 * 
+			 * String ->Number(浮点数)
+			 * parseFloat(变量名)
+			 * 
+			 * 解析错误就返回NaN 用isNaN函数来判断
+			 */
+			var a = "10.1";
+			document.write("a的值(转化前)是：" + a + " 类型是:" + typeof(a) + "<br />");
+			//开始转换  parseInt(变量名);
+			a = parseInt(a);
+			document.write("a的值(转化后)是：" + a + " 类型是:" + typeof(a) + "<br />");
+			var b = "3.14";
+			document.write("b的值(转化前)是：" + b + " 类型是:" + typeof(b) + "<br />");
+			//开始转换  parseInt(变量名);
+			var b = parseFloat(b);
+			document.write("b的值(转化后)是：" + b + " 类型是:" + typeof(b) + "<br />");
+		</script>
+	</head>
+
+	<body>
+	</body>
+
+</html>
